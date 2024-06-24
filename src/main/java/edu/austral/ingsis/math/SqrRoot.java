@@ -13,6 +13,9 @@ public class SqrRoot implements Function{
     public double evaluate(Map<String, Double> variables) {
         return Math.sqrt(eval.evaluate(variables));
     }
+    public double evaluate() {
+        return Math.sqrt(eval.evaluate());
+    }
 
     @Override
     public void accept(Processor process) {

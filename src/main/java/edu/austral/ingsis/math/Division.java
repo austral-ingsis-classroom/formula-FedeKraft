@@ -3,8 +3,8 @@ package edu.austral.ingsis.math;
 import java.util.Map;
 
 public class Division implements Function{
-    Function denominator;
-    Function numerator;
+    public Function denominator;
+    public Function numerator;
 
     public Division(Function numerator, Function denominator) {
         this.denominator = denominator;
@@ -13,6 +13,9 @@ public class Division implements Function{
     @Override
     public double evaluate(Map<String, Double> variables) {
         return denominator.evaluate(variables) / numerator.evaluate(variables);
+    }
+    public double evaluate() {
+        return denominator.evaluate() / numerator.evaluate();
     }
 
     @Override

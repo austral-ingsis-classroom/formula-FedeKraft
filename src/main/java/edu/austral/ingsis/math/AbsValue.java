@@ -11,6 +11,9 @@ public class AbsValue implements Function{
     public double evaluate(Map<String, Double> variables) {
         return Math.abs(abs.evaluate(variables));
     }
+    public double evaluate() {
+        return Math.abs(abs.evaluate());
+    }
 
     @Override
     public void accept(Processor process) {

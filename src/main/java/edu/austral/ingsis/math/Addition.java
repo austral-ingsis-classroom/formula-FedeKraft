@@ -14,6 +14,9 @@ public class Addition implements Function{
     public double evaluate(Map<String, Double> variables) {
         return sum1.evaluate(variables) + sum2.evaluate(variables);
     }
+    public double evaluate() {
+        return sum1.evaluate() + sum2.evaluate();
+    }
 
     @Override
     public void accept(Processor process) {

@@ -13,6 +13,9 @@ public class Pwr implements Function{
     public double evaluate(Map<String, Double> variables) {
         return Math.pow(num.evaluate(variables), pow.evaluate(variables));
     }
+    public double evaluate() {
+        return Math.pow(num.evaluate(), pow.evaluate());
+    }
 
     @Override
     public void accept(Processor process) {

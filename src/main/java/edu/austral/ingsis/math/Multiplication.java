@@ -15,6 +15,9 @@ public class Multiplication implements Function{
     public double evaluate(Map<String, Double> variables) {
         return mult1.evaluate(variables) * mult2.evaluate(variables);
     }
+    public double evaluate() {
+        return mult1.evaluate() * mult2.evaluate();
+    }
 
     @Override
     public void accept(Processor process) {

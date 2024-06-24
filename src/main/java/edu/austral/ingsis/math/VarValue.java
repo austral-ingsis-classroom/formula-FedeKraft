@@ -17,6 +17,9 @@ public class VarValue implements Function {
         }
         return value;
     }
+    public double evaluate() {
+        throw new IllegalStateException("Variable not initialized: " + var);
+    }
 
 
     @Override

@@ -11,6 +11,9 @@ public class FixedValue implements Function{
     public double evaluate(Map<String, Double> variables) {
         return val;
     }
+    public double evaluate() {
+        return val;
+    }
 
     @Override
     public void accept(Processor process) {

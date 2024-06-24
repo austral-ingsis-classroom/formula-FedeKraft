@@ -10,17 +10,18 @@ public class ResolutionTest {
   /** Case 1 + 6 */
   @Test
   public void shouldResolveSimpleFunction1() {
-    final Double result = 7d;
-
-    assertThat(result, equalTo(7d));
+    final Double expected = 7d;
+    Function function = new Addition(new FixedValue(1), new FixedValue(6));
+    Double result = function.evaluate(null);
+    assertThat(result, equalTo(expected));
   }
 
   /** Case 12 / 2 */
   @Test
   public void shouldResolveSimpleFunction2() {
     final Double result = 6d;
-
-    assertThat(result, equalTo(6d));
+    Function function = new Division(new FixedValue(12), new FixedValue(2));
+    assertThat(result, equalTo(function.evaluate()));
   }
 
   /** Case (9 / 2) * 3 */
