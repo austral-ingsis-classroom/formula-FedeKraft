@@ -1,0 +1,93 @@
+@startuml
+
+interface Expression {
+    + evaluate(Map<String, Double> variables) : double
+    + accept(Processor process)
+}
+
+class Sum {
+    + evaluate(Map<String, Double> variables) : double
+    + accept(Processor process)
+
+}
+class Subtract {
+    + evaluate(Map<String, Double> variables) : double
+    + accept(Processor process)
+}
+class Division {
+    + evaluate(Map<String, Double> variables) : double
+    + accept(Processor process)
+}
+
+class Multiplication {
+    + evaluate(Map<String, Double> variables) : double
+    + accept(Processor process)
+}
+
+class VarValue {
+    + evaluate(Map<String, Double> variables) : double
+    + accept(Processor process)
+}
+class Pwr {
+    + evaluate(Map<String, Double> variables) : double
+    + accept(Processor process)
+}
+class FixedValue {
+    + evaluate(Map<String, Double> variables) : double
+    + accept(Processor process)
+}
+
+class SqrRoot {
+    + evaluate(Map<String, Double> variables) : double
+    + accept(Processor process)
+}
+
+class AbsValue {
+    + evaluate(Map<String, Double> variables) : double
+    + accept(Processor process)
+}
+
+interface Processor {
+    + process(Sum sum)
+    + process(Multiply multiply)
+    + process(Divide divide)
+    + process(Subtract subtract)
+    + process(Exponentiation exponentiation)
+    + process(Root root)
+    + process(Absolute absolute)
+    + process(Constant constant)
+    + process(Variable variable)
+}
+
+class DisplayProcessor {
+    + process(Sum sum)
+    + process(Multiply multiply)
+    + process(Divide divide)
+    + process(Subtract subtract)
+    + process(Exponentiation exponentiation)
+    + process(Root root)
+    + process(Absolute absolute)
+    + process(Constant constant)
+    + process(Variable variable)
+}
+
+Expression <|.. Sum
+Expression <|.. Multiplication
+Expression <|.. Division
+Expression <|.. Subtract
+Expression <|.. Pwr
+Expression <|.. SqrRoot
+Expression <|.. AbsValue
+Expression <|.. FixedValue
+Expression <|.. VarValue
+Processor <|-- DisplayProcessor
+
+Multiplication *-- Expression
+Division *-- Expression
+Subtract *-- Expression
+Pwr *-- Expression
+SqrRoot *-- Expression
+AbsValue *-- Expression
+
+Expression -> Processor
+@enduml
