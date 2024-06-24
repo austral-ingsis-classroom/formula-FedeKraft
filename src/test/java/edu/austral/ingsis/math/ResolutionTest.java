@@ -33,6 +33,7 @@ public class ResolutionTest {
     Double result = function.evaluate(null);
     assertThat(result, equalTo(expected));
   }
+
   /** Case (27 / 6) ^ 2 */
   @Test
   public void shouldResolveSimpleFunction4() {

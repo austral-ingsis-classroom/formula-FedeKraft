@@ -3,31 +3,31 @@ package edu.austral.ingsis.math;
 import java.util.Map;
 
 public class VarValue implements Function {
-    private final String var;
+  private final String var;
 
-    public VarValue(String name) {
-        this.var = name;
-    }
+  public VarValue(String name) {
+    this.var = name;
+  }
 
-    @Override
-    public double evaluate(Map<String, Double> variables) {
-        Double value = variables.get(var);
-        if (value == null) {
-            throw new IllegalStateException("Variable not initialized: " + var);
-        }
-        return value;
+  @Override
+  public double evaluate(Map<String, Double> variables) {
+    Double value = variables.get(var);
+    if (value == null) {
+      throw new IllegalStateException("Variable not initialized: " + var);
     }
-    public double evaluate() {
-        throw new IllegalStateException("Variable not initialized: " + var);
-    }
+    return value;
+  }
 
+  public double evaluate() {
+    throw new IllegalStateException("Variable not initialized: " + var);
+  }
 
-    @Override
-    public void accept(Processor process) {
-        process.process(this);
-    }
+  @Override
+  public void accept(Processor process) {
+    process.process(this);
+  }
 
-    public String getVar() {
-        return var;
-    }
+  public String getVar() {
+    return var;
+  }
 }
