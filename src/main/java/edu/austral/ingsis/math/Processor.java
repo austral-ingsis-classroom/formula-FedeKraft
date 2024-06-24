@@ -4,7 +4,6 @@ public interface Processor {
     void process(Addition Sum);
     void process(Substraction Sub);
     void process(Division Div);
-
     void process(Multiplication Mult);
     void process(VarValue var);
     void process(Pwr exp);
