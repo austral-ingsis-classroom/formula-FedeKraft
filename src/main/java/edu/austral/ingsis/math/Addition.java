@@ -19,11 +19,7 @@ public class Addition implements Function{
     public void accept(Processor process) {
         process.process(this);
     }
-    public Function getSum1() {
-        return sum1;
-    }
+    public Function getSum1() {return sum1;}
 
-    public Function getSum2() {
-        return sum2;
-    }
+    public Function getSum2() {return sum2;}
 }
