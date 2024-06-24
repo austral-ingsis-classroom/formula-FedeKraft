@@ -1,6 +1,6 @@
 @startuml
 
-interface Expression {
+interface Function {
     + evaluate(Map<String, Double> variables) : double
     + accept(Processor process)
 }
@@ -71,23 +71,23 @@ class DisplayProcessor {
     + process(Variable variable)
 }
 
-Expression <|.. Sum
-Expression <|.. Multiplication
-Expression <|.. Division
-Expression <|.. Subtract
-Expression <|.. Pwr
-Expression <|.. SqrRoot
-Expression <|.. AbsValue
-Expression <|.. FixedValue
-Expression <|.. VarValue
+Function <|.. Sum
+Function <|.. Multiplication
+Function <|.. Division
+Function <|.. Subtract
+Function <|.. Pwr
+Function <|.. SqrRoot
+Function <|.. AbsValue
+Function <|.. FixedValue
+Function <|.. VarValue
 Processor <|-- DisplayProcessor
 
-Multiplication *-- Expression
-Division *-- Expression
-Subtract *-- Expression
-Pwr *-- Expression
-SqrRoot *-- Expression
-AbsValue *-- Expression
+Multiplication *-- Function
+Division *-- Function
+Subtract *-- Function
+Pwr *-- Function
+SqrRoot *-- Function
+AbsValue *-- Function
 
-Expression -> Processor
+Function -> Processor
 @enduml

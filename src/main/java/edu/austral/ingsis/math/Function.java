@@ -1,3 +1,9 @@
 package edu.austral.ingsis.math;
 
-public interface Function {}
+import java.util.Map;
+
+public interface Function {
+    double evaluate(Map<String, Double> variables);
+
+    void accept(Processor process);
+}
