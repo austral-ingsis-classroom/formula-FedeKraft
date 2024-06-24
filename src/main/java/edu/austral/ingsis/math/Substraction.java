@@ -1,4 +1,15 @@
 package edu.austral.ingsis.math;
 
-public class Substraction {
+import java.util.Map;
+
+public class Substraction implements Function{
+    @Override
+    public double evaluate(Map<String, Double> variables) {
+        return 0;
+    }
+
+    @Override
+    public void accept(Processor process) {
+
+    }
 }
