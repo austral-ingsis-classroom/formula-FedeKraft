@@ -24,9 +24,9 @@ public class DisplayProcessor implements Processor{
     @Override
     public void process(Division Div) {
         stringBuild.append("(");
-        Div.numerator.accept(this);
+        Div.denomindaor.accept(this);
         stringBuild.append(" / ");
-        Div.denominator.accept(this);
+        Div.numerador.accept(this);
         stringBuild.append(")");
     }
 

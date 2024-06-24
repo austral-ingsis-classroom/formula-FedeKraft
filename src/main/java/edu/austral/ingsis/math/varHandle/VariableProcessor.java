@@ -28,8 +28,8 @@ public class VariableProcessor implements Processor {
 
     @Override
     public void process(Division division) {
-        division.numerator.accept(this);
-        division.denominator.accept(this);
+        division.denomindaor.accept(this);
+        division.numerador.accept(this);
     }
 
     @Override
